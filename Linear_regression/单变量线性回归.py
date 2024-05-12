@@ -5,11 +5,10 @@ Created on 2024/5/12 12:17
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from linear_regression import LinearRegression
 
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
-
-from linear_regression import LinearRegression
 
 data = pd.read_csv('data/world-happiness-report-2017.csv')  # 读取数据
 
