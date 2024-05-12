@@ -1,10 +1,14 @@
+"""
+Created on 2024/5/11 18:19
+@author: 王中校
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
 from linear_regression import LinearRegression
 
-data = pd.read_csv('../data/non-linear-regression-x-y.csv')
+data = pd.read_csv('data/non-linear-regression-x-y.csv')
 
 x = data['x'].values.reshape((data.shape[0], 1))
 y = data['y'].values.reshape((data.shape[0], 1))

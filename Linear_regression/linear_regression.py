@@ -17,7 +17,7 @@ class LinearRegression:
         (data_processed,  # 预处理之后的数据
          features_mean,  # mean值
          features_devitation  # 标准差
-         ) = prepare_for_training(data, polynomial_degree=0, sinusoid_degree=0, normalize_data=True)
+         ) = prepare_for_training(data, polynomial_degree, sinusoid_degree, normalize_data=True)
         self.data = data_processed  # 使用预处理之后的数据进行后续操作
         self.labels = labels
         self.feature_mean = features_mean
@@ -70,21 +70,21 @@ class LinearRegression:
         prediction = np.dot(data, theta)  # 用data 乘 theta
         return prediction
 
-    def get_cost(self,data,labels):
+    def get_cost(self, data, labels):
         data_processed = prepare_for_training(data,
          self.polynomial_degree,
          self.sinusoid_degree,
          self.normalize_data
          )[0]
 
-        return self.cost_function(data_processed,labels) #损失值
+        return self.cost_function(data_processed, labels) #损失值
 
-    def prdict(self,data):
+    def prdict(self, data):
         """用训练好的参数模型，预测回归结果"""
         data_processed = prepare_for_training(data,
                                               self.polynomial_degree,
                                               self.sinusoid_degree,
                                               self.normalize_data
                                               )[0]
-        predictions = LinearRegression.hypothesis(data_processed,self.theta)
+        predictions = LinearRegression.hypothesis(data_processed, self.theta)
         return predictions
