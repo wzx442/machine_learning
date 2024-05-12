@@ -87,3 +87,4 @@ class LinearRegression:
                                               self.normalize_data
                                               )[0]
         predictions = LinearRegression.hypothesis(data_processed,self.theta)
+        return predictions
