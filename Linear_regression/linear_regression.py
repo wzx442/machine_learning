@@ -60,7 +60,7 @@ class LinearRegression:
         """损失函数，损失计算方法"""
         num_example = data.shape[0]  # 样本个数
         delta = LinearRegression.hypothesis(self.data, self.theta) - labels  # 当前的预测值
-        cost = (1 / 2) * np.dot(delta.T, delta)
+        cost = (1 / 2) * np.dot(delta.T, delta)/num_example
         return cost[0][0]
 
     @staticmethod  # 静态方法 调用静态方法时，不需要创建类实例，只需要使用类名即可
