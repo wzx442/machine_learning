@@ -14,7 +14,7 @@ plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 plotly.offline.init_notebook_mode()
 
-data = pd.read_csv('data/world-happiness-report-2017.csv')  # 读取数据
+data = pd.read_csv('../data/world-happiness-report-2017.csv')  # 读取数据
 
 # 得到训练和测试数据
 train_data = data.sample(frac=0.8)          # 80%的值用于训练

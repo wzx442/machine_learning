@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 from linear_regression import LinearRegression
 
-data = pd.read_csv('data/non-linear-regression-x-y.csv')
+data = pd.read_csv('../data/non-linear-regression-x-y.csv')
 
 x = data['x'].values.reshape((data.shape[0], 1))
 y = data['y'].values.reshape((data.shape[0], 1))

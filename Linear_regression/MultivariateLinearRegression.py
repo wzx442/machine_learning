@@ -11,7 +11,7 @@ import plotly.graph_objs as go
 plotly.offline.init_notebook_mode()
 from linear_regression import LinearRegression
 
-data = pd.read_csv('data/world-happiness-report-2017.csv')
+data = pd.read_csv('../data/world-happiness-report-2017.csv')
 
 train_data = data.sample(frac=0.8)
 test_data = data.drop(train_data.index)
